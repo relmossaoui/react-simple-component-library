@@ -15,26 +15,27 @@
     opacity: .8;
     visibility: hidden;
     transition: transform .1s, visibility 0.1s;
+    width: max-content;
 }
 
 .tooltip__title--bottom {
-    bottom: -30px;;
-    left: calc(50% - 10px);
+    top: calc(100% + 10px );
+    left: 0;
 }
 
 .tooltip__title--top {
-    top: -30px;
-    left: calc(50% - 10px);
+    bottom: calc(100% + 10px );
+    left: 0;
 }
 
 .tooltip__title--left {
     top: 0;
-    right: calc( 100% + 5px);
+    right: calc( 100% + 10px);
 }
 
 .tooltip__title--right {
     top: 0;
-    left: calc( 100% + 5px);
+    left: calc( 100% + 10px);
 }
 
 /** styling tooltip arrow */
