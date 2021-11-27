@@ -57,9 +57,10 @@ export default function ({
             className="tooltip__target" 
             onMouseOver={() => setTooltipVisibility(true) }
             onMouseOut={() => setTooltipVisibility() }
+            data-test-id="tooltip-container-test-id"
         > 
             { children } 
-            <div ref={ tooltipRef } className={ tooltipClass } > { title } </div>
+            <div data-test-id="tooltip-content-test-id" ref={ tooltipRef } className={ tooltipClass } > { title } </div>
         </div>
     )
 }

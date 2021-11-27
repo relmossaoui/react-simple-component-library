@@ -34,7 +34,7 @@ export default function ({
             --switch--bg-color : ${ checked ? color : '#b1afaf80' }
         `;
 
-        // update checker styles anomation based on its state 
+        // update checker styles animation based on its state 
         checkerRef.current.setAttribute('style', styles);
 
     }, [ checked ])
@@ -44,8 +44,8 @@ export default function ({
 
     return (
         <div className="switch-container">
-            <div className={ `switch switch--label-dir-${  switchLabelDir }` }>
-                <label className="switch__label"> { label } </label>
+            <div data-test-id="switch-container-test-id" className={ `switch switch--label-dir-${  switchLabelDir }` }>
+                <label data-test-id="switch-input-label-test-id" className="switch__label"> { label } </label>
                 <div>
                     <div className="switch__checkbox">
                         <input 
@@ -53,11 +53,13 @@ export default function ({
                             className="switch__input"
                             type="checkbox" 
                             checked={checked}
+                            data-test-id="switch-input-test-id"
                         />
                         <div 
                             ref={checkerRef} 
                             onClick={() => onChange(!checked)} 
                             className="switch__checker" 
+                            data-test-id="switch-checker-test-id"
                         ></div>
                     </div>  
                 </div>  
